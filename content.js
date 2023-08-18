@@ -1,7 +1,11 @@
 
 module.exports = {
 
-    'output':{rows:[
+    'output':{
+        
+        pgtitle:"Homepage",
+
+        rows:[
 
         {
             leftcol:`<h5>Welcome to my GitHub Repo</h5>

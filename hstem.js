@@ -1,4 +1,6 @@
 
+const TOP_LEFT_TEXT = 'amirlogic';
+
 
 
 module.exports = (ndl='',hdata={})=>{
@@ -7,9 +9,9 @@ module.exports = (ndl='',hdata={})=>{
 
         let htcont = `<nav class="navbar navbar-light">
 		
-            <span class="navbar-brand" href="#">amirlogic</span>
+            <span class="navbar-brand mx-4" href="#">${TOP_LEFT_TEXT}</span>
             
-            <div class="navbar-text"><a href="/userpanel" title="userpanel"><strong>&gt;&gt;</strong></a></div>
+            <div class="navbar-text mx-4"><a href="/userpanel" title="userpanel"><strong>&gt;&gt;</strong></a></div>
 
         </nav>
         
