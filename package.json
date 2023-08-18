@@ -1,0 +1,26 @@
+{
+  "name": "js-ssg",
+  "version": "0.1.0",
+  "description": "Js Static Site Generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amirlogic/js-ssg.git"
+  },
+  "keywords": [
+    "JS",
+    "SSG"
+  ],
+  "author": "AMir Hachaichi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amirlogic/js-ssg/issues"
+  },
+  "homepage": "https://github.com/amirlogic/js-ssg#readme",
+  "dependencies": {
+    "htwrite": "^0.1.1"
+  }
+}
