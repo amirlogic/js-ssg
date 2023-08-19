@@ -1,6 +1,37 @@
 
 module.exports = {
 
+    'dynalgo':{
+        
+        pgtitle:"amirlogic | Dynalgo",
+
+        rows:[
+
+        {
+            leftcol:`<h5>Git</h5>
+                                
+                    <p>Helps you using git command line tool</p>
+                    <p><a href="https://amirlogic.github.io/dynalgo/git.html">amirlogic.github.io/dynalgo/git.html</a></p>
+                    `,
+    
+            rightcol:`<h5>Hepatitis B (french)</h5>
+    
+                    <p>Helps with hepatitis B serology interpretation</p>
+                    <p><a href="https://amirlogic.github.io/dynalgo/hepatite-b.html">amirlogic.github.io/dynalgo/hepatite-b.html</a></p>`
+        },
+
+       /*  {
+            leftcol:`<h5>Welcome to my GitHub Repo</h5>
+                                
+                    <p></p>`,
+    
+            rightcol:`<h5>Data-driven web applications</h5>
+    
+                    <p></p>`
+        }, */
+
+    ]},
+    
     'output':{
         
         pgtitle:"Homepage",

@@ -10,9 +10,9 @@ const { webpage } = require('htwrite')
 const fs = require('fs');
 
 
-function writePage(filename){
+function writePage(filename,template){
 
-    let htcontent = hstem('page-simple-twocol-multirow',content[filename])
+    let htcontent = hstem(template,content[filename])
 
     let filecontent = webpage(content[filename].pgtitle,xhead,htcontent)
 
@@ -23,4 +23,6 @@ function writePage(filename){
     });
 }
 
-writePage('output')
+//writePage('output','page-simple-twocol-multirow')
+
+writePage('dynalgo','page-simple-twocol-multirow')

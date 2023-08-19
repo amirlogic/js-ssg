@@ -1,0 +1,202 @@
+<!doctype html>
+          <html>
+            <head>
+              <meta charset="utf-8">
+              <title>amirlogic | Dynalgo</title>
+              <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <script>
+
+                let inputdata = {};
+
+                async function sendToServer( ndl, cdata = {} ){
+
+                  fetch('/api',{
+
+                    method: 'POST',
+                    mode: 'cors', 
+                    cache: 'no-cache', 
+                    credentials: 'same-origin',
+                    headers: {
+                      'Content-Type': 'application/json'
+                      
+                    },
+                    redirect: 'follow', 
+                    referrerPolicy: 'no-referrer',
+                    body: JSON.stringify( { "ndl":ndl, "dyd":{ ...inputdata, ...cdata } } ),
+
+                  })
+                  .then(response => response.json())
+                  .then( (rdata) => {
+
+                      if( rdata.hasOwnProperty('redirect') ){
+
+                        window.location.href = rdata.redirect;
+                      }
+
+                      if( rdata.hasOwnProperty('rawdata') ){
+
+                        console.log(rawdata);
+                      }
+
+                    console.log(rdata)
+                  } );
+                }
+
+              </script>
+              <style>
+
+    header{
+        
+        height:50px;
+        padding:20px 10%;
+        font-weight:bold;
+        background-color:#FFFFFF;
+        color:#555555;
+    }
+
+    header a{
+        
+        text-decoration:none;
+    }
+
+    #headtext{
+        
+        color:#8B909A;
+        text-align:center;
+    }
+
+    .celltxt p{
+
+        color:#565656;
+        font-size:16px;
+    }
+
+    .celltxt h5{
+
+        color:#212a36;
+        margin-bottom:20px;
+    }
+
+    #topimg{
+        
+        background-image: url('datacenter.jpg');
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size:cover;
+        height:500px;
+    }
+
+    .purpose{
+        
+        margin-top:50px;
+    }
+
+    #visform{
+        
+        background-color:#E5E5E5;
+        padding-top:30px;
+        padding-bottom:30px;
+        
+    }
+
+    h5{
+
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    body{
+        
+        background-color:#FEFEFE;
+        font-size:90%;
+        
+    }
+
+    a{
+        text-decoration:none;
+    }
+
+    footer{
+        
+        min-height:200px;
+        padding-top:30px;
+        padding-bottom:100px;
+        text-align:center;
+        font-size:14px;
+        background-color:#EEEEEE;
+        color:#777777;
+    }
+
+    @media only screen and (max-width: 600px) {
+        
+        body {
+        font-size:16px;
+        }
+        
+        footer{
+            display:none;
+        }
+
+        #topimg{
+            display:none;
+        }
+        
+    }
+
+</style>
+            </head>
+            <body>
+                <nav class="navbar navbar-light">
+		
+            <span class="navbar-brand mx-4" href="#">amirlogic</span>
+            
+            <div class="navbar-text mx-4"><a href="/userpanel" title="userpanel"><strong>&gt;&gt;</strong></a></div>
+
+        </nav>
+        
+        <main class="container-fluid">
+
+            <div style="margin-top:100px;margin-bottom:40px;min-height:300px;">
+                
+                <div class="row">
+                    
+                                <div class="col-sm" style="font-size:130%;font-weight:300;padding-bottom:50px;">
+
+                                    <div class="celltxt" style="padding:0 4%;">
+                                    
+                                        <h5>Git</h5>
+                                
+                    <p>Helps you using git command line tool</p>
+                    <p><a href="https://amirlogic.github.io/dynalgo/git.html">amirlogic.github.io/dynalgo/git.html</a></p>
+                    
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-sm" style="font-size:130%;font-weight:300;padding-bottom:50px;">
+                        
+                                    <div class="celltxt" style="padding:0 4%;">
+                                        
+                                        <h5>Hepatitis B (french)</h5>
+    
+                    <p>Helps with hepatitis B serology interpretation</p>
+                    <p><a href="https://amirlogic.github.io/dynalgo/hepatite-b.html">amirlogic.github.io/dynalgo/hepatite-b.html</a></p>
+                                        
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+   
+            </div>
+
+        </main>
+        
+        <footer>
+		
+		    <div style="padding:20px 0;">Copyright 2023</div>
+		
+	    </footer>
+            </body>
+          </html>
